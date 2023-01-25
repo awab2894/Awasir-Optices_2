@@ -1,0 +1,477 @@
+﻿-<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device.wdith", initial-scale="1.0"/>
+    <title>بصريات أواصر</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /*home-------------------------------------------------------------------*/
+        p {
+            font-weight: 300;
+            color: #111;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(bg1.jpg);
+            background-size: cover;
+        }
+
+            .banner .content {
+                max-width: 700px;
+                text-align: center;
+            }
+
+                .banner .content h1 {
+                    font-size: 70px;
+                    color: #fff;
+                    text-shadow: 0 0 5px #000;
+                }
+
+                .banner .content p {
+                    font-size: 30px;
+                    color: #000;
+                    margin-bottom: 20px;
+                    animation: bluring 3s;
+                    text-shadow: 0 0 5px #fff;
+                }
+        /*unbluring the text ; animation*/
+        @keyframes bluring {
+            0% {
+                filter: blur(7px);
+            }
+
+            100% {
+                filter: none;
+            }
+        }
+
+        .banner span {
+            color: red;
+        }
+        /*design a button*/
+        .btn {
+            font-size: 20px;
+            color: #fff;
+            background: #402986;
+            box-shadow: 0px 0px 0 #110057;
+            border-radius: 25px;
+            display: inline-block;
+            padding: 10px 30px;
+            margin: 10px;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: -2px;
+            transition: 0.5s;
+        }
+
+            .btn:hover {
+                letter-spacing: 0px;
+               background: 50409a
+            }
+
+            .btn:active {
+                letter-spacing: 0.5px;
+               background: 55459f;
+            }
+
+
+        /*header-------------------------------------------------------------------------*/
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.5s;
+            background: rgba(245,245,245,0.8);
+        }
+            /*make a logo*/
+            header .logo {
+                position: relative;
+                width: 50px;
+                height: 50px;
+                display: flex;
+            }
+
+                header .logo img:hover {
+                    width: 500%;
+                    height: 500%;
+                    top: -30px;
+                    left: -200px;
+                }
+
+                header .logo img {
+                    position: absolute;
+                    top: -12.5px;
+                    left: -12.5px;
+                    width: 150%;
+                    height: 150%;
+                    object-fit: cover;
+                    transition: 1s;
+                }
+            /*make a nivgation list*/
+            header .list {
+                position: relative;
+                display: flex;
+            }
+
+                header .list li {
+                    list-style: none;
+                    margin-right: 70px;
+                }
+
+                    header .list li a {
+                        text-decoration: none;
+                        color: #222;
+                        font-weight: 300;
+                        font-size: 15px;
+                        font-family: Calibri;
+                        transistion: 0.5s;
+                    }
+
+                        header .list li a:hover {
+                            color: #59489f;
+                            border-radius: 20px;
+                            font-family: Tahoma;
+                            transform: scale(1.08);
+                        }
+
+        /*padding the sections*/
+        section {
+            padding: 120px;
+        }
+
+        /*about-------------------------------------------------------------------------------------------*/
+        .row {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        /*two colums*/
+        .col50 {
+            position: relative;
+            width: 40%;
+            text-align: end;
+        }
+
+        /*titletext format*/
+        .titletext {
+            color: #000;
+            font-size: 50px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p 
+        {
+            font-size: 25px;
+            color: #222;
+            text-align: center;
+        }
+
+        .titletext span {
+            font-size: 50px;
+            color: #f00;
+        }
+
+        .row .col50 .imgbox {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+        }
+
+            .row .col50 .imgbox img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 80%;
+                height: 100%;
+                object-fit: fill;
+                left: 25%;
+            }
+
+        /*designs and team and contact-------------------------------------------------------------------------*/
+        .title {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .designs .content {
+            display: flex;
+            justify-content: right;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+        }
+
+            .designs .content .box {
+                width: 300px;
+                margin: 20px;
+                border: 15px solid #fff;
+                text-align: center;
+                box-shadow: 0 5px 35px rgba(0,0,0,0.1);
+            }
+
+                .designs .content .box .imgbx {
+                    position: relative;
+                    width: 100%;
+                    height: 200px;
+                    margin-bottom: 7px;
+                }
+
+                    .designs .content .box .imgbx img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+        /*contact form --------------------------------------------------------------------------*/
+        form {
+            margin: 17px;
+            position: relative;
+            width: 350px;
+            height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+            form input {
+                position: relative;
+                width: 240px;
+                height: 30px;
+                margin-top: 13px;
+                background: #eee;
+                border: 0;
+                font-size: 19px;
+                justify-content: start;
+            }
+
+            form textarea {
+                width: 260px;
+                margin-top: 19px;
+                font-size: 20px;
+                background: #eee;
+                resize: none;
+            }
+
+                form textarea:focus {
+                    width: 346px;
+                    height: 500px;
+                }
+
+            form select {
+                position: relative;
+                width: 120px;
+                max-height: 35px;
+                background: #eee;
+                font-size: 15px;
+                margin-top: 16px;
+            }
+/* this codes are added later than others */
+.link
+{
+      font-size: 15px;
+      text-align: center;
+      /* hero image */
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);   
+}
+
+
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <ul class="list">
+            <li><a href="#copyrights">المصمم</a></li>
+            <li><a href="#contact">تواصل</a></li>
+            <li><a href="#team">فريقنا</a></li>
+            <li><a href="#designs">النظارات</a></li>
+            <li><a href="#about">نبذة</a></li>
+            <li><a href="#banner">الرئيسية</a></li>
+        </ul>
+        <div class="logo">
+            <img src="logo2.png" alt="الشعار"/>
+        </div>
+    </header>
+
+
+    <section class="banner" id="banner">
+        <div class="content">
+            <h1>دائماً اختر الأفضل</h1>
+            <P><span>نحن </span>نوفر لك عناية خاصة لترى العالم بشكل أفضل</P>
+            <a href="#designs" class="btn">ا لـنــظـا ر ا ت</a>
+        </div>
+    </section>
+
+
+
+    <section class="row" id="about">
+        <div class="col50">
+            <div class="imgbox">
+                <img src="img1.jpg" alt="صورة بصريات أواصر">
+            </div>
+        </div>
+        <div class="col50">
+            <h1 class="titletext"><span>نُ</span>بذة</h1>
+            <p>نحن بصريات أواصر نقدم أنفسنا لكم كمركز متواضع لتلبية خدماتكم البصرية من فحص طبي إلى أجود أنواع الفريمات والعدسات، نرجو أن نكون في حسن ظنكم وأن نرقى إلى توقعاتكم</p>
+        </div>
+    </section>
+
+
+    <section class="designs" id="designs">
+        <div class="title">
+            <h1 class="titletext">ال<span>ن</span>ظارات</h1>
+            <p>نمتلك أفضل وأجود أنواع الفريمات والعدسات من أشهر الماركات العالمية</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgbx" >
+                    <img src="glasses10.jpg" alt="صورة نظارة"/>
+                </div>
+                <div class="text">
+                    <h3>Glasses1</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="glasses7.jpg" alt="صورة نظارة"/>
+                </div>
+                <div class="text">
+                    <h3>Glasses2</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="glasses9.jpg" alt="صورة نظارة"/>
+                </div>
+                <div class="text">
+                    <h3>Glasses3</h3>
+                </div>
+            </div>
+        </div>
+        <a href="awasirDesigns.html" class="btn">ا لـمـز يـد</a>
+    </section>
+
+
+
+    <section class="designs" id="team">
+        <div class="title">
+            <h1 class="titletext"><span>فـ</span>ـريقنا</h1>
+            <p> فريق أواصر دائماً في خدمتكم </p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgbx">
+                    <img src="person3.png" alt="صورة شخص"/>
+                </div>
+                <div class="text">
+                    <h3>أمجد محمد</h3>
+                    <p>مدير</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="person1.png" alt="صورة شخص"/>
+                </div>
+                <div class="text">
+                    <h3>مازن عبدالرحيم</h3>
+                    <p>طبيب</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="person2.png" alt="صورة شخص"/>
+                </div>
+                <div class="text">
+                    <h3>مدثر كامل</h3>
+                    <p>طبيب</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="designs" id="contact">
+
+        <div class="title">
+            <h1 class="titletext"><span>ت</span>واصل معنا</h1>
+            <p> فريق أواصر دائماً في خدمتكم ولا يتوانى في الرد على أسئلتكم واستفساراتكم </p>
+
+            <form method="post" action="awasir.php">
+                <input type="text" name="name " placeholder="الاسم" required />
+                <input type="email" name="email" placeholder="بريدك الالكتروني" required />
+                <input type="tel" name="phone" placeholder="رقم الهاتف - اختياري" />
+                <select name="state">
+                    <option>الولاية التي تسكن بها</option>
+                    <option>الخرطوم</option>
+                    <option>الشمالية</option>
+                    <option>نهر النيل</option>
+                    <option>البحر الأحمر</option>
+                    <option>كسلا</option>
+                    <option>دارفور</option>
+                    <option>كردفان</option>
+                    <option>الجزيرة</option>
+                    <option>النيل الأبيض</option>
+                    <option>النيل الأزرق</option>
+                    <option>سنار</option>
+                    <option>القضارف</option>
+                </select>
+                <textarea name="massage" rows="5" placeholder="... اكتب رسالتك هنا" required></textarea>
+                <button class="btn" type="submit">إ ر سـا ل</button>
+            </form>
+        </div>
+
+    <div class="link">    
+        <a class="email" href="mailto:algazaly62300@gmail.com" target="_blank">تواصل معنا عبر البريد الالكتروني</a> - <a class="fb" href="  https://www.facebook.com/profile.php?id=100063440786811" target="_blank">
+                رابط صفحتنا على الفيسبوك
+            </a>
+    </div>
+
+    <div id="copyrights">
+        <br />
+        <br />
+        <br />
+        <hr />
+        <br />
+        <a href="mailto:algazaly62300@gmail.com" style="color: #000; direction: ltr; font-size: 16px; margin: 3px;">&copy; Created by Awab Moahmmed</a>
+        <br />
+        <br />
+    </div>
+</body>
+</html>
